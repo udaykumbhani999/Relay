@@ -1,0 +1,38 @@
+@import "../../Style/Common.scss";
+
+
+.header{
+    top: 28px;
+    position: sticky;
+    z-index: 10;
+    @include md{
+        top: 0;
+    }
+    .navbar{
+        padding: 0;
+        .container-fluid{
+            .navbar-brand{
+                padding: 0;
+                margin-right: 100px;
+            }
+        }
+        .navbar-nav{
+            .nav-link{
+                font-family: $urb-600rg;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 22px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: $white;
+                margin-right: 30px;
+                padding: 0;
+                @include md{
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

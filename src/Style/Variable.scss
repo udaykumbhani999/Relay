@@ -1,0 +1,23 @@
+$urb-400rg : 'Urbanist-Regular';
+$urb-500rg : 'Urbanist-Medium';
+$urb-500it: 'Urbanist-MediumItalic';
+$urb-600rg: 'Urbanist-SemiBold';
+$urb-600it: 'Urbanist-SemiBoldItalic';
+
+$primery-color: #000000;
+$secondary-color: #8BF7EF;
+$bg-first : #EFEADF;
+$white : #FFFFFF;
+
+$border-first: #486FFF;
+
+$breakpoints:( 'xxsm':480px,'xsm':576px, 'sm': 768px, 'md': 992px, 'xmd': 1024px, 'lg': 1200px,'xlg': 1320px,);
+    @mixin xxsm{@media (max-width: map-get($breakpoints, 'xxsm')) {@content;}}
+    @mixin xsm{@media (max-width: map-get($breakpoints, 'xsm')) {@content;}}
+    @mixin sm{@media (max-width: map-get($breakpoints, 'sm')) {@content;}}
+    @mixin md {@media (max-width: map-get($breakpoints, 'md')) {@content;}}
+    @mixin xmd {@media (max-width: map-get($breakpoints, 'xmd')) {@content;}}
+    @mixin lg {@media (max-width: map-get($breakpoints, 'lg')) {@content;}}
+    @mixin xlg {@media (max-width: map-get($breakpoints, 'xlg')) {@content;}}
+   
+   

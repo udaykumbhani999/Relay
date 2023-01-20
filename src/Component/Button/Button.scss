@@ -1,0 +1,27 @@
+@import "../../Style/Common.scss";
+
+.btns{
+    text-align: start;
+    .btn{
+        font-family: $urb-600rg;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $primery-color;
+        padding: 5px 40px;
+        border: 1px solid $primery-color;
+        border-radius: 0px;
+        transition: all 0.4s;
+        &:hover{
+            background-color: $primery-color;
+            color: $secondary-color;
+        }
+        @include sm{
+            padding: 3px 25px;
+        }
+    }
+}

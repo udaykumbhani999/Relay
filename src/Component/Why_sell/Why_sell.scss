@@ -1,0 +1,111 @@
+@import "../../Style/Common.scss";
+
+
+.whysell{
+    .row{
+        margin: 0;
+        .col{
+            padding: 0;
+        }
+        .col-2{
+            .shapebox{
+                height: 100%;
+                background-color: $bg-first;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    border-bottom: 1px solid $border-first;
+                    width: 100%;
+                    top: 360px;
+                    left: 0;
+                   
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    border-right: 1px solid $border-first;
+                    width: 100%;
+                    top: 0px;
+                    right: 90px;
+                    height: 360px;
+                    @include sm{
+                        right: 30px;
+                    }
+                }
+            }
+        }
+        .col-10{
+            
+            .sell_content{
+                height: 100%;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                .sellbox{
+                    background-color: $secondary-color;
+                    height: 180px;
+                    width: 100%;
+                    @include sm{
+                        height: 150px;
+                    }
+                }
+                .sellbox2{
+                    width: 100%;
+                    .sellbox_content{
+                        margin: 130px 90px 147px 180px;
+                        @include xlg{
+                            margin: 100px 50px 147px 100px; 
+                        }
+                        @include xmd{
+                            margin: 50px; 
+                        }
+                        @include xsm{
+                            margin: 25px; 
+                        }
+                        .why_sell-title{
+                            margin-bottom: 56px;
+                            @include sm{
+                                margin-bottom: 25px;
+                                font-size: 30px;
+                                line-height: 40px;
+                            }
+                            @include xsm{
+                                margin-bottom: 15px;
+                                font-size: 22px;
+                                line-height: 30px;
+                            }
+                        }
+                        .feature_boxs{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            @include md{
+                                grid-template-columns: auto;
+                            }
+                            .feature{
+                                margin-bottom: 40px;
+                                @include sm{
+                                    margin-bottom: 20px;
+                                }
+                                .f_p-text{
+                                    color: $primery-color;
+                                    max-width: 370px;
+                                    @include md{
+                                        max-width: 100%;
+                                    }
+                                }
+                                .f_para{
+                                    color: $primery-color;
+                                    max-width: 370px;
+                                    @include md{
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

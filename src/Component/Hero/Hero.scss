@@ -1,0 +1,88 @@
+@import "../../Style/Common.scss";
+
+.hero{
+    margin-top: -38px;
+   @include md{
+    margin-top: -144px;
+   }
+    .row{
+        margin: 0;
+        .col{
+            padding: 0;
+        }
+        .col-8{
+            background-color: $primery-color;
+            .hero_ct{
+                max-width: 664px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0px 16px;
+                .hero-content{
+                    padding: 266px 0px;
+                    @include sm{
+                        padding: 200px 0px;
+                    }
+                    @include xsm{
+                        padding: 200px 0px 50px 0px;
+                    }
+                    .hero_h3{
+                        max-width: 510px;
+                        margin-bottom: 20px;
+                        @include sm{
+                            margin-bottom: 10px;
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                    }
+                    .hero_h6{
+                        max-width: 440px;
+                        margin-bottom: 40px;
+                        @include sm{
+                            margin-bottom: 20px;
+                            @include sm{
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shape{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                background-image: url(../../Assets/Images/Heroshape.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 577px;
+                height: 100%;
+                top: 0px;
+                right: -120px;
+                bottom: 0px;
+                z-index: 5;
+            }
+        }
+        .col-4{
+            background-color: $white;
+            .row{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                .col{
+                    padding: 0;
+                    width: 100%;
+                }
+                .col-8{
+                    background-color: $secondary-color;
+                   height: 60%;
+                }
+                .col-4{
+                    background-color: $bg-first;
+                    height: 40%;
+                }
+            }
+        }
+        
+    }
+}
