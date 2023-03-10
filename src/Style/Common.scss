@@ -19,7 +19,6 @@ body {
   padding: 0px 16px;
 }
 
-
 ul,
 li,
 a,
@@ -143,25 +142,30 @@ h6 {
   }
 }
 
+.newClass {
+  .header {
+    background: rgba(0, 0, 0, 0.4901960784);
+    z-index: 10;
+    transition: all 0.4s;
+    animation: 0.3s ease-out 0s 1 normal forwards running stickyEffect;
 
-body.newClass header.header {
-  background: rgba(0, 0, 0, 0.4901960784);
-  z-index: 10;
-  transition: all 0.4s;
-  animation: 0.3s ease-out 0s 1 normal forwards running stickyEffect;
-
-  @keyframes stickyEffect {
-    0%{
-      transform: translateY(-100%);
-    }
-    100%{
-      transform: translateY(0);
+    @keyframes stickyEffect {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   }
 }
-body.newClass header.header .btns .btn{
-  color: $white;
-  border-color: $white;
+.newClass {
+  .header {
+    .btns {
+      .btn {
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
 }
-
-

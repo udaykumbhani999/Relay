@@ -8,6 +8,7 @@
     left: 0;
     padding: 26px 40px;
     z-index: 10;
+    transition: all 0.45s;
     @include md{
         top: 0;
     }
@@ -20,6 +21,24 @@
             .navbar-brand{
                 padding: 0;
                 margin-right: 100px;
+                @include xxsm{
+                    margin-right: 0;
+                }
+            }
+            .navbar-toggler{
+                .menuicon{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                   gap: 7px;
+                   border: 1px solid $white;
+                   padding: 10px;
+                   border-radius: 10px;
+                    .line{
+                        width: 25px;
+                        border: 1px solid $white;
+                    }
+                }
             }
         }
         .navbar-nav{
@@ -43,6 +62,13 @@
                     color: $secondary-color;
                 }
             }
+        }
+    }
+    .navbar-toggler{
+        border: none;
+        padding: 0;
+        &:focus,:hover{
+            box-shadow: none;
         }
     }
 }
