@@ -1,0 +1,83 @@
+@import "../../Style/Common.scss";
+
+.what_look {
+  .look_wrapper {
+    display: flex;
+    @include sm {
+      flex-direction: column;
+    }
+    .leftslook {
+      width: 40%;
+      position: relative;
+      @include sm {
+        width: 100%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../../Assets/Images/Forground.svg);
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+        height: 718px;
+        width: 100%;
+        @include md{
+          height: 500px;
+        }
+        @include sm {
+          display: none;
+        }
+      }
+      .what_look_left {
+        .look_headingleft {
+          max-width: 440px;
+          margin-top: 100px;
+          margin-left: 178px;
+          @include lg {
+            margin-top: 50px;
+            margin-left: 75px;
+            font-size: 40px;
+            line-height: 55px;
+          }
+          @include md {
+            margin-top: 50px;
+            margin-left: 25px;
+            font-size: 30px;
+            line-height: 35px;
+          }
+        }
+        .leftbg {
+          width: 180px;
+          height: 100%;
+          background-color: $secondary-color;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
+        }
+      }
+    }
+    .rightslook {
+      width: 60%;
+      background-color: $primary-color;
+      padding: 100px 106px;
+      @include lg {
+        padding: 50px;
+      }
+      @include md {
+        padding: 25px;
+      }
+      @include sm {
+        width: 100%;
+      }
+      .wrapper_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        @include lg {
+          gap: 30px;
+        }
+      }
+    }
+  }
+}

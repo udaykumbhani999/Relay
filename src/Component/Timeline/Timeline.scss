@@ -1,0 +1,106 @@
+@import "../../Style/Common.scss";
+
+.timeline {
+  .tl_bgblack {
+    background-color: $primary-color;
+    padding-bottom: 100px;
+    @include sm{
+      padding: 50px 0px;
+    }
+    .tl_main {
+      .tl_container {
+        max-width: 1312px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px 16px;
+      }
+      .tl_wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: -90px;
+        @include sm{
+          margin-top: 0;
+        }
+        @include sm{
+          flex-direction: column;
+          gap: 20px;
+        }
+        .box {
+          background: linear-gradient(
+            270.04deg,
+            #486fff -0.07%,
+            rgba(72, 111, 255, 0) 99.63%
+          );
+          height: 501px;
+          width: 501px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          @include lg{
+            height: 400px;
+            width: 400px;
+          }
+          @include md{
+            height: 300px;
+            width: 300px;
+          }
+          .tl_content {
+            padding-left: 126px;
+            @include lg{
+              padding-left: 50px;
+            }
+            @include md{
+              padding-left: 30px;
+            }
+            .heading_three {
+              white-space: nowrap;
+              max-width: 326px;
+              overflow: hidden;
+              margin-bottom: 15px;
+              @include lg {
+                font-size: 22px;
+                line-height: 30px;
+              }
+              @include md{
+                margin-bottom: 5px;
+              }
+            }
+            .heading_six {
+              max-width: 290px;
+              min-height: 104px;
+              @include lg {
+                font-size: 14px;
+                line-height: 20px;
+              }
+              @include md{
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 200px;
+                overflow: hidden;
+                min-height: 50px;
+              }
+            }
+          }
+        }
+      }
+      .timline_btn {
+        margin: 77px 0px 0px;
+        @include sm{
+          margin: 50px 0px 0px;
+        }
+      }
+    }
+  }
+  .box.boxs {
+    margin-left: -111px;
+    @include lg{
+      margin-left: -50px;
+    }
+    @include md{
+      margin-left: 0px;
+    }
+  }
+}

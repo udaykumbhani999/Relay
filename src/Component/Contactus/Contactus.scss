@@ -1,0 +1,107 @@
+@import "../../Style/Common.scss";
+
+.contactpage {
+  overflow: hidden;
+  .contact_bg {
+    background-color: $primary-color;
+    padding: 125px 0px;
+    position: relative;
+    @include sm {
+      padding: 75px 0px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../../Assets/Images/Contactshape.png);
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      height: 357px;
+      width: 482px;
+      @include md {
+        width: 300px;
+      }
+      @include sm {
+        height: 250px;
+      }
+      @include xsm {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../../Assets/Images/Rightshape.png);
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: 0;
+      height: 357px;
+      width: 482px;
+      @include md {
+        width: 300px;
+      }
+      @include sm {
+        height: 250px;
+      }
+    }
+    .contact_wrapper {
+      z-index: 2;
+      position: relative;
+      .contact_headingtwo {
+        color: $white;
+        margin-bottom: 20px;
+        @include lg {
+          font-size: 40px;
+          line-height: 55px;
+        }
+        @include md {
+          margin-bottom: 10px;
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @include xsm {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+      .contact_headingsix {
+        margin-bottom: 25px;
+        max-width: 620px;
+        @include md {
+          margin-bottom: 15px;
+        }
+      }
+      .forms {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include xsm {
+          gap: 10px;
+        }
+        @include xsm {
+          flex-direction: column;
+        }
+        input {
+          padding: 9px 15px;
+          width: 325px;
+          outline: none;
+          @include sm {
+            padding: 5px 10px;
+          }
+          @include xsm {
+            padding: 5px 50px 5px 10px;
+          }
+          @include xsm {
+            width: 280px;
+          }
+          &::placeholder {
+            font-family: $urb-400rg;
+            font-size: 16px;
+            line-height: 26px;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

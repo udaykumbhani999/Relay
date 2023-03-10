@@ -1,0 +1,147 @@
+@import "../../Style/Common.scss";
+
+.whysell {
+  .why-sell_bg{
+    .darkbg{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 360px;
+      background-color: $white-100;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      @include md{
+        width: 200px;
+      }
+      // &::after{
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   right: 90px;
+      //   border: 1px solid $border-first;
+      //   height: 360px;
+      //   @include md{
+      //     right: 50px;
+      //   }
+      //   @include sm{
+      //     height: 200px;
+      //   }
+      // }
+      // &::before{
+      //   content: '';
+      //   position: absolute;
+      //   top: 360px;
+      //   left: 0;
+      //   right: 0;
+      //   border: 1px solid $border-first;
+      //   @include sm{
+      //     top: 200px;
+      //   }
+      // }
+      .darkfirst_box{
+        width: 100%;
+        height: 100%;
+        max-height: 360px;
+        border-bottom: 1px solid $border-first;
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          border: 1px dashed $border-first;
+          right: 90px;
+          top: 0;
+          bottom: 0;
+          @include md{
+            right: 50px;
+          }
+        }
+      }
+      .darksecond_box{
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue;
+        overflow: hidden;
+        .circleborder{
+          width: 540px;
+          height: 540px;
+          border-top-left-radius: 540px 540px;
+          border: 0.5px dashed #486FFF;
+         
+        }
+      }
+    }
+    background-color: $white_150;
+    position: relative;
+    height: 900px;
+    @include sm{
+      height: 600px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 180px;
+      width: 100%;
+      z-index:0;
+      background-color: $secondary-color;
+    }
+    .why_sell-content{
+      z-index: 1;
+      position: relative;
+      .sellbox_content {
+        max-width: 810px;
+        position: absolute;
+        right: 90px;
+        top: 310px;
+        @include sm{
+          top: 100px;
+          right: 0;
+        }
+        .why_sell-title {
+          margin-bottom: 56px;
+          @include sm {
+            margin-bottom: 25px;
+            font-size: 30px;
+            line-height: 40px;
+          }
+          @include xsm {
+            margin-bottom: 15px;
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+        .feature_boxs {
+          display: grid;
+          grid-template-columns: auto auto;
+          @include md {
+            grid-template-columns: auto;
+          }
+          .feature {
+            margin-bottom: 40px;
+            @include sm {
+              margin-bottom: 20px;
+            }
+            .f_p-text {
+              color: $primary-color;
+              max-width: 370px;
+              @include md {
+                max-width: 100%;
+              }
+            }
+            .f_para {
+              color: $primary-color;
+              max-width: 370px;
+              @include md {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

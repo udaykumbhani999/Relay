@@ -1,0 +1,68 @@
+@import "../../Style/Common.scss";
+
+
+.expertes{
+    background-color: $border-first;
+    padding: 100px 0px;
+    @include sm{
+        padding: 50px 0px;
+    }
+    .exp_wrapper{
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        @include xmd{
+            padding: 0px 16px;
+        }
+        .exp_heading{
+            font-family: $urb-400rg;
+            font-size: 39px;
+            line-height: 44px;
+            letter-spacing: -0.025em;
+            color: $white;
+            margin-bottom: 73px;
+            @include xmd{
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @include sm{
+                font-size: 22px;
+                line-height: 30px;
+                margin-bottom: 50px;
+            }
+            @include xsm{
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        .exp_logos{
+            list-style-type: none;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            gap: 178px;
+            @include xlg{
+                gap: 100px;
+            }
+            @include xmd{
+                flex-wrap: wrap;
+                gap: 100px;
+            }
+            @include sm{
+                gap: 50px;
+            }
+            @include xsm{
+                gap: 25px;
+            }
+            li{
+                font-family: $urb-600rg;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+    }
+}
