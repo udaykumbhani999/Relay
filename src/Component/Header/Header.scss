@@ -2,11 +2,17 @@
 
 
 .header{
-    top: 28px;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 26px 40px;
     z-index: 10;
     @include md{
         top: 0;
+    }
+    @include xsm{
+        padding: 20px 20px;
     }
     .navbar{
         padding: 0;
@@ -29,8 +35,12 @@
                 color: $white;
                 margin-right: 30px;
                 padding: 0;
+                transition: all 0.4s;
                 @include md{
                     text-align: start;
+                }
+                &:hover{
+                    color: $secondary-color;
                 }
             }
         }

@@ -1,0 +1,63 @@
+@import "../../Style/Common.scss";
+
+.times {
+  .times_bg{
+    background-color: $white-100;
+    position: relative;
+    padding: 132px 0px;
+   @include md{
+    padding: 100px 0px;
+   }
+  }
+  .time_content{
+    z-index: 2;
+    position: relative;
+    .title_two {
+      @include lg {
+        font-size: 40px;
+        line-height: 55px;
+      }
+      @include md {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+    .title_six {
+      color: $primary-color;
+      margin-top: 11px;
+      @include lg {
+        margin-top: 7px;
+      }
+    }
+  }
+  .secondery_bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 270px;
+    background-color: $secondary-color;
+    @include sm{
+      width: 150px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      right: 0;
+      border: 1px solid $primary-color;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 90px;
+      border: 1px dashed $primary-color;
+      @include sm{
+        right: 50px;
+      }
+    }
+  }
+}

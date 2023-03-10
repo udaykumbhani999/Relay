@@ -1,4 +1,5 @@
 export const Image = {
-    // Aboutbg_first: require("../Assets/Images/Aboutbg_first.png"),
+    Founder_first: require("../Assets/Images/Founder_first.png"),
+    Founder_second: require("../Assets/Images/Founder_second.png"),
 
 }
